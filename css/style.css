@@ -1,0 +1,468 @@
+/* style.css - Portfolio Gaia Vicenzi */
+
+/* === RESET E IMPOSTAZIONI BASE === */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manjari', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+}
+
+/* === HEADER === */
+.header-nav {
+    background-color: #000000;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* Logo GV */
+.logo-text {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo-text:hover {
+    color: #f5f0e8;
+}
+
+/* Lista di navigazione */
+.nav-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Items della navigazione */
+.nav-item {
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+.nav-link {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 20px;
+    padding: 8px;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f5f0e8;
+}
+
+/* === MENU MOBILE === */
+.mobile-nav-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.mobile-nav-wrapper.show {
+    display: flex;
+}
+
+.mobile-nav-wrapper .nav-list {
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.mobile-nav-wrapper .nav-item {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-nav-wrapper .nav-link {
+    font-size: 24px;
+    padding: 12px 0;
+}
+
+.mobile-nav-wrapper .nav-link:hover {
+    color: #f5f0e8;
+}
+
+/* Bottone menu */
+.btn-menu {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-menu:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Bottone close menu */
+.btn-close {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-close:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+    background-color: #f5f0e8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.hero-title {
+    font-family: 'Kalnia', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* === SEZIONI DARK (sfondo nero) === */
+.section-dark {
+    background-color: #000000;
+    padding: 80px 0;
+}
+
+/* Titoli sezioni */
+.section-title {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Testo sezioni */
+.section-text {
+    font-family: 'Manjari', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Box di testo */
+.text-box {
+    padding: 20px;
+}
+
+/* === CHI SONO & COSA STUDIO === */
+#chi-sono img,
+#cosa-studio img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* === I MIEI PROGETTI === */
+.progetti-grid {
+    margin-top: 40px;
+}
+
+.progetto-card {
+    padding: 10px;
+}
+
+.progetto-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 19px;
+}
+
+.progetto-titolo {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.progetto-desc {
+    font-family: 'Manjari', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* === IMMAGINE GRANDE CESTO === */
+.cesto-section {
+    background-color: #000000;
+    padding: 0;
+}
+
+.cesto-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* === SAZIN SECTION === */
+.sazin-section {
+    padding: 100px 0;
+}
+
+.sazin-section .section-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* === COMPETENZE === */
+#competenze img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* === CONTATTI SECTION === */
+.contatti-section {
+    background-color: #f5f0e8;
+    padding: 80px 0;
+}
+
+.section-title-dark {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.contatto-item {
+    padding: 20px;
+}
+
+.contatto-icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.contatto-icon-svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.contatto-text {
+    font-family: 'Manjari', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    margin: 0;
+}
+
+/* === FOOTER === */
+.footer-section {
+    background-color: #f5f0e8;
+    padding: 30px 0;
+    border-top: 1px solid #cccccc;
+}
+
+.footer-text {
+    font-family: 'Manjari', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    margin: 0;
+}
+
+/* === UTILITY CLASSES === */
+.text-center {
+    text-align: center;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+/* === MEDIA QUERIES === */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 56px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-text {
+        font-size: 16px;
+    }
+    
+    .nav-link {
+        margin: 0 12px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 100vh;
+        padding-top: 80px;
+    }
+    
+    .hero-title {
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+    
+    .section-dark {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .section-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+    
+    .text-box {
+        padding: 15px;
+    }
+    
+    .progetto-titolo {
+        font-size: 14px;
+    }
+    
+    .progetto-desc {
+        font-size: 13px;
+    }
+    
+    .sazin-section {
+        padding: 60px 0;
+    }
+    
+    .contatti-section {
+        padding: 60px 0;
+    }
+    
+    .section-title-dark {
+        font-size: 24px;
+    }
+    
+    .contatto-text {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Small (max-width: 576px) */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .logo-text {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .section-text {
+        font-size: 14px;
+    }
+    
+    .progetto-card {
+        padding: 5px;
+    }
+    
+    .progetto-titolo {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    
+    .progetto-desc {
+        font-size: 12px;
+    }
+    
+    .contatto-icon {
+        font-size: 28px;
+    }
+    
+    .contatto-text {
+        font-size: 14px;
+    }
+}

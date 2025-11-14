@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaia Vicenzi - Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@400;700&family=Karla:wght@400;700&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <!-- HEADER -->
+  <header class="header-nav">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <!-- Logo GV -->
+            <div class="col-6 col-lg-2">
+              <a href="#home" class="logo-text">GV</a>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <div class="col-lg-9 nav-wrapper d-none d-lg-block">
+                <ul class="nav-list">
+                      <li class="nav-item">
+                          <a href="#chi-sono" class="nav-link">CHI SONO</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#cosa-studio" class="nav-link">COSA STUDIO</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#progetti" class="nav-link">PROGETTI</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#competenze" class="nav-link">COMPETENZE</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#contatti" class="nav-link">CONTATTI</a>
+                      </li>
+                </ul>
+            </div>
+            
+            <!-- Bottone Menu Mobile -->
+            <div class="col-6 col-lg-1 d-flex justify-content-end align-items-center">
+              <button class="btn btn-menu d-block d-lg-none">Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-nav-wrapper d-lg-none">
+         <button class="btn btn-close mb-3">Close</button> 
+           <ul class="nav-list">
+                  <li class="nav-item">
+                      <a href="#chi-sono" class="nav-link">CHI SONO</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#cosa-studio" class="nav-link">COSA STUDIO</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#progetti" class="nav-link">PROGETTI</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#competenze" class="nav-link">COMPETENZE</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#contatti" class="nav-link">CONTATTI</a>
+                  </li>
+            </ul> 
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="hero-title">GAIA VICENZI</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI SONO SECTION -->
+  <section id="chi-sono" class="section-dark">
+    <div class="container content-wrapper">
+      <div class="row align-items-center">
+        <!-- Immagine -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+          <img class="img-fluid" src="img/Rectangle_16.jpg" alt="Gaia Vicenzi">
+        </div>
+        <!-- Testo -->
+        <div class="col-12 col-lg-6">
+          <div class="text-box">
+            <h2 class="section-title">CHI SONO?</h2>
+            <p class="section-text">
+              Mi chiamo Gaia, vengo da Rimini e sono una persona creativa
+               e innovativa, con una profonda passione per il mondo del design 
+               in tutte le sue forme. Amo sperimentare, trovare soluzioni 
+               originali e dare vita a idee che uniscono 
+                Sono determinata e curiosa, e affronto ogni progetto con entusiasmo,
+                 vedendo le sfide come opportunità per crescere, imparare e migliorarmi continuamente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COSA STUDIO SECTION -->
+  <section id="cosa-studio" class="section-dark">
+    <div class="container content-wrapper">
+      <div class="row align-items-center">
+        <!-- Testo -->
+        <div class="col-12 col-lg-6 order-2 order-lg-1">
+          <div class="text-box">
+            <h2 class="section-title">COSA STUDIO?</h2>
+            <p class="section-text">
+              Attualmente frequento il secondo anno del Corso di Laurea triennale in Design presso
+               l’Università degli Studi della Repubblica di San Marino. Il mio percorso è iniziato 
+               con il diploma, conseguito nel giugno 2024, presso l’Istituto Professionale I.S.I.S.S. 
+               “Einaudi - Molari” di Rimini,
+                dove ho avuto modo di avvicinarmi al mondo del design e sviluppare le basi della mia 
+                identità creativa.
+            </p>
+          </div>
+        </div>
+        <!-- Immagine -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0 order-1 order-lg-2">
+          <img class="img-fluid" src="img/uni.jpg" alt="Università">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- I MIEI PROGETTI SECTION -->
+  <section id="progetti" class="section-dark">
+    <div class="container content-wrapper">
+      <div class="row mb-5">
+        <div class="col-12">
+          <h2 class="section-title text-center">I MIEI PROGETTI</h2>
+        </div>
+      </div>
+      
+      <!-- Progetti Grid Desktop: 4 colonne / Mobile: 2x2 -->
+      <div class="row progetti-grid">
+        
+        <!-- Progetto 1 -->
+        <div class="col-6 col-lg-3 mb-4">
+          <div class="progetto-card">
+            <img class="img-fluid mb-3" src="img/parapetto.jpg" alt="Parapetto per moto con airbag">
+            <h3 class="progetto-titolo"> Parapetto per mountain-bike</h3>
+            <p class="progetto-desc">
+             Parapetto per mountain-bike
+Realizzazione di una protezione per il petto con il programma di modellazione 3d Rhinoceros.
+          </div>
+        </div>
+
+        <!-- Progetto 2 -->
+        <div class="col-6 col-lg-3 mb-4">
+          <div class="progetto-card">
+            <img class="img-fluid mb-3" src="img/naming.jpg" alt="Naming Hub Astoria">
+            <h3 class="progetto-titolo">Naming Hub Astoria</h3>
+            <p class="progetto-desc">
+              Progetto riabilitativo di un luogo adibito a 
+              mercato nelle vicinanze della stazione di 
+              Ravenna, da me è stato utilizzato come logo 
+              sul quale ho proseguito a creare manifesti.
+            </p>
+          </div>
+        </div>
+
+        <!-- Progetto 3 -->
+        <div class="col-6 col-lg-3 mb-4">
+          <div class="progetto-card">
+            <img class="img-fluid mb-3" src="img/workshop.jpg" alt="Sacro, contenitore di pace">
+            <h3 class="progetto-titolo">Sacro, contenitore di pace</h3>
+            <p class="progetto-desc">
+              Realizzato in un workshop sulla ceramica 
+              decorata, in questo oggetto ho potuto 
+              sviluppare le tecniche già utilizzate in 
+              precedenza che permettono di sviluppare la 
+              tecnica di intreccio.
+            </p>
+          </div>
+        </div>
+
+        <!-- Progetto 4 -->
+        <div class="col-6 col-lg-3 mb-4">
+          <div class="progetto-card">
+            <img class="img-fluid mb-3" src="img/copricapo.jpg" alt="Copricapo in feltro con elementi">
+            <h3 class="progetto-titolo">Copricapo in feltro con elementi</h3>
+            <p class="progetto-desc">
+              Progetto realizzato in quinta superiore dove 
+              abbiamo lavorato sulla forma e la funzione 
+              degli abiti e degli accessori, dove l'obiettivo 
+              era quello di poter trovare un equilibrio tra 
+              forma e design.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- IMMAGINE GRANDE CESTO -->
+  <section class="cesto-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 p-0">
+          <img class="img-fluid w-100" src="img/sacro.jpg" alt="Sacro - Cesto intrecciato">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAZIN SECTION -->
+  <section class="sazin-section section-dark">
+    <div class="container content-wrapper">
+      <div class="row">
+        <div class="col-12 col-lg-8 offset-lg-2">
+          <h2 class="section-title text-center mb-4">Sazin</h2>
+          <p class="section-text text-center">
+            Progetto svolto nelle scorse settimane per pianificare ed 
+            esporre idee su un oggetto che poi avremmo dovuto 
+            realizzare. Il sazin è il primo progetto che ha richiesto 
+            una grande accuratezza in più ambiti. Il primo è stato lo 
+            sviluppo dell'idea, come utilizzare la carta. Poi ho pensato 
+            a quali tecniche utilizzare per renderlo più verosimile. 
+            La carta da me utilizzata è una carta paglia, come 
+            contenuto l'ho realizzato utilizzando la pasta di sale. 
+            Come caratteristica finale il piatto è stato realizzato con un 
+            intreccio che lo rende resistente anche per utilizzi in varie 
+            circostanze.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETENZE SECTION -->
+  <section id="competenze" class="section-dark">
+    <div class="container content-wrapper">
+      <div class="row align-items-center">
+        <!-- Immagine Laptop -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+          <img class="img-fluid" src="img/computer.jpg" alt="Competenze digitali">
+        </div>
+        <!-- Testo -->
+        <div class="col-12 col-lg-6">
+          <div class="text-box">
+            <h2 class="section-title">COMPETENZE</h2>
+            <p class="section-text">
+              So utilizzare abbastanza bene programmi come 
+              Adobe Illustrator, Photoshop, InDesign ma 
+              posseggo anche conoscenze per quanto riguarda 
+              Figma. Sono capace di utilizzare la suite office, 
+              ma so anche utilizzare programmi di modellazione 
+              e stampa 3D come Rhinoceros, come anche 
+              Autocad per quanto riguarda disegno tecnico. 
+              Ho esperienza come fotografa, conosco l'utilizzo 
+              di diverse macchine professionali e possiedo 
+              una discreta conoscenza di Lightroom. Ho 
+              esperienza col tornio e la ceramica in tutte le 
+              varie tecniche e sono capace di lavorare i metalli 
+              e il legno avendo a disposizione un laboratorio 
+              e sapendo utilizzare le macchine.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI SECTION -->
+  <section id="contatti" class="contatti-section">
+    <div class="container content-wrapper">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="section-title-dark text-center mb-5">CONTATTI</h2>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-4 mb-4 text-center">
+          <div class="contatto-item">
+            <img src="img/telephone.svg" alt="Telefono" class="contatto-icon-svg">
+            <p class="contatto-text">+39 345 174 4531</p>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-4 mb-4 text-center">
+          <div class="contatto-item">
+            <img src="img/mail.svg" alt="Email" class="contatto-icon-svg">
+            <p class="contatto-text">gaiavicenzi07@gmail.com</p>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-4 mb-4 text-center">
+          <div class="contatto-item">
+            <img src="img/instagram.svg" alt="Instagram" class="contatto-icon-svg">
+            <p class="contatto-text">@gaiavice</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="footer-text">© 2025 - Gaia Vicenzi - Portfolio</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript per menu mobile -->
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const btnMenu = document.querySelector('.btn-menu');
+    const btnClose = document.querySelector('.btn-close');
+    const mobileNavWrapper = document.querySelector('.mobile-nav-wrapper');
+    const navLinks = document.querySelectorAll('.mobile-nav-wrapper .nav-link');
+    
+    // Apre il menu mobile
+    btnMenu.addEventListener('click', function() {
+        mobileNavWrapper.style.display = 'flex';
+        setTimeout(() => {
+            mobileNavWrapper.classList.add('show');
+        }, 10);
+    });
+    
+    // Chiude il menu mobile
+    function closeMenu() {
+        mobileNavWrapper.classList.remove('show');
+        setTimeout(() => {
+            if (!mobileNavWrapper.classList.contains('show')) {
+                mobileNavWrapper.style.display = 'none';
+            }
+        }, 300);
+    }
+    
+    btnClose.addEventListener('click', closeMenu);
+    
+    // Chiude il menu quando clicchi su un link
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+    });
+    
+    // Smooth scroll per i link interni
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+  </script>
+
+</body>
+</html>
