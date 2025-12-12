@@ -395,13 +395,20 @@ html, body {
     margin-bottom: 15px;
 }
 
-.contatto-icon-svg {
+.icone-svg {
     width: 40px;
     height: 40px;
     display: block;
     margin: 0 auto 15px;
 }
+.icone-svg{
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
 
+.contatto-link:hover .icone-svg {
+    transform: translateY(-8px);
+    filter: invert(1);
+}
 .contatto-text {
     font-family: 'Manjari', sans-serif;
     font-size: 18px;
@@ -415,9 +422,6 @@ html, body {
     transition: transform 0.3s ease;
 }
 
-.contatto-link:hover {
-    transform: translateY(-5px);
-}
 
 .contatto-link:hover .contatto-text {
     color: #333333;
