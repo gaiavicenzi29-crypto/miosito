@@ -1,6 +1,3 @@
-/* style.css - Portfolio Gaia Vicenzi */
-
-/* === RESET E IMPOSTAZIONI BASE === */
 html, body {
     margin: 0;
     padding: 0;
@@ -15,7 +12,7 @@ html, body {
     max-width: 1200px;
 }
 
-/* === HEADER === */
+/*HEADER */
 .header-nav {
     background-color: #000000;
     padding: 20px 0;
@@ -33,11 +30,18 @@ html, body {
     font-size: 28px;
     color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .logo-text:hover {
     color: #f5f0e8;
+    transform: scale(1.15);
+}
+
+.logo-text:active {
+    transform: scale(1.25);
+    transition: transform 0.15s ease;
 }
 
 /* Lista di navigazione */
@@ -66,13 +70,29 @@ html, body {
     margin: 0 20px;
     padding: 8px;
     white-space: nowrap;
+    position: relative;
     transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #ffffff;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .nav-link:hover {
     color: #f5f0e8;
 }
-
 /* === MENU MOBILE === */
 .mobile-nav-wrapper {
     position: fixed;
@@ -102,7 +122,22 @@ html, body {
     margin: 20px 0;
     width: 100%;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
+.mobile-nav-wrapper.show .nav-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ritardi progressivi per effetto cascata */
+.mobile-nav-wrapper.show .nav-item:nth-child(1) { transition-delay: 0.1s; }
+.mobile-nav-wrapper.show .nav-item:nth-child(2) { transition-delay: 0.2s; }
+.mobile-nav-wrapper.show .nav-item:nth-child(3) { transition-delay: 0.3s; }
+.mobile-nav-wrapper.show .nav-item:nth-child(4) { transition-delay: 0.4s; }
+.mobile-nav-wrapper.show .nav-item:nth-child(5) { transition-delay: 0.5s; }
 
 .mobile-nav-wrapper .nav-link {
     font-size: 24px;
@@ -114,10 +149,11 @@ html, body {
 }
 
 /* Bottone menu */
+/* Bottone menu */
 .btn-menu {
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    color: #ffffff;
+    background-color: #f5f0e8;
+    border: 2px solid #f5f0e8;
+    color: #000000;
     padding: 8px 16px;
     cursor: pointer;
     font-family: 'Karla', sans-serif;
@@ -129,8 +165,8 @@ html, body {
 .btn-menu:hover {
     background-color: #ffffff;
     color: #000000;
+    border: 2px solid #ffffff;
 }
-
 /* Bottone close menu */
 .btn-close {
     background-color: transparent;
@@ -144,7 +180,19 @@ html, body {
     position: absolute;
     top: 30px;
     right: 30px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+}
+
+.mobile-nav-wrapper .btn-close {
+    opacity: 0;
+    transform: rotate(-90deg);
+    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease;
+}
+
+.mobile-nav-wrapper.show .btn-close {
+    opacity: 1;
+    transform: rotate(0deg);
+    transition-delay: 0.6s;
 }
 
 .btn-close:hover {
@@ -152,7 +200,7 @@ html, body {
     color: #000000;
 }
 
-/* === HERO SECTION === */
+/* HERO SECTION  */
 .hero-section {
     background-color: #f5f0e8;
     min-height: 100vh;
@@ -172,10 +220,11 @@ html, body {
     letter-spacing: 2px;
 }
 
-/* === SEZIONI DARK (sfondo nero) === */
+/*SEZIONI DARK (sfondo nero)*/
 .section-dark {
     background-color: #000000;
-    padding: 80px 0;
+    padding: 120px 0;
+    min-height: 100vh;
 }
 
 /* Titoli sezioni */
@@ -202,15 +251,29 @@ html, body {
     padding: 20px;
 }
 
-/* === CHI SONO & COSA STUDIO === */
+/*CHI SONO & COSA STUDIO*/
 #chi-sono img,
 #cosa-studio img {
     width: 100%;
     height: auto;
     display: block;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-/* === I MIEI PROGETTI === */
+#chi-sono img.visible,
+#cosa-studio img.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#chi-sono img.visible:hover,
+#cosa-studio img.visible:hover {
+    transform: scale(1.03);
+    transition: transform 0.6s ease;
+}
+/*I MIEI PROGETTI*/
 .progetti-grid {
     margin-top: 40px;
 }
@@ -224,7 +287,15 @@ html, body {
     height: auto;
     margin-bottom: 15px;
     border-radius: 19px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
+
+.progetto-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
 
 .progetto-titolo {
     font-family: 'Karla', sans-serif;
@@ -243,7 +314,7 @@ html, body {
     margin: 0;
 }
 
-/* === IMMAGINE GRANDE CESTO === */
+/* IMMAGINE GRANDE CESTO */
 .cesto-section {
     background-color: #000000;
     padding: 0;
@@ -253,28 +324,53 @@ html, body {
     width: 100%;
     height: auto;
     display: block;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-/* === SAZIN SECTION === */
-.sazin-section {
+.cesto-section img.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.cesto-section img.visible:hover {
+    transform: scale(1.03);
+    transition: transform 0.6s ease;
+}
+
+/*  SACRO SECTION */
+.sacro-section {
     padding: 100px 0;
 }
 
-.sazin-section .section-text {
+.sacro-section .section-text {
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* === COMPETENZE === */
+
+/*COMPETENZE */
 #competenze img {
     width: 100%;
     height: auto;
     display: block;
-    
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
+#competenze img.visible {
+    opacity: 1;
+    transform: scale(1);
+}
 
-/* === CONTATTI SECTION === */
+#competenze img.visible:hover {
+    transform: scale(1.03);
+    transition: transform 0.6s ease;
+}
+
+/* CONTATTI SECTION  */
 .contatti-section {
     background-color: #f5f0e8;
     padding: 80px 0;
@@ -313,7 +409,21 @@ html, body {
     margin: 0;
 }
 
-/* === FOOTER === */
+.contatto-link {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.contatto-link:hover {
+    transform: translateY(-5px);
+}
+
+.contatto-link:hover .contatto-text {
+    color: #333333;
+}
+
+/*FOOTER  */
 .footer-section {
     background-color: #f5f0e8;
     padding: 30px 0;
@@ -327,7 +437,7 @@ html, body {
     margin: 0;
 }
 
-/* === UTILITY CLASSES === */
+/*UTILITY CLASSES */
 .text-center {
     text-align: center;
 }
@@ -352,7 +462,24 @@ html, body {
     padding: 0;
 }
 
-/* === MEDIA QUERIES === */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ritardi progressivi per effetto cascata */
+.progetto-card.fade-in-up:nth-child(1) { transition-delay: 0.1s; }
+.progetto-card.fade-in-up:nth-child(2) { transition-delay: 0.2s; }
+.progetto-card.fade-in-up:nth-child(3) { transition-delay: 0.3s; }
+.progetto-card.fade-in-up:nth-child(4) { transition-delay: 0.4s; }
+
+/* MEDIA QUERIES  */
 
 /* Tablet (max-width: 992px) */
 @media (max-width: 992px) {
@@ -376,9 +503,9 @@ html, body {
 
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
-    .hero-section {
+    .section-dark {
+        padding: 100px 0;
         min-height: 100vh;
-        padding-top: 80px;
     }
     
     .hero-title {
