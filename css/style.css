@@ -444,6 +444,14 @@ html, body {
     margin: 0;
 }
 
+
+.footer-section .logo-text {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: #000;
+    }
+
+
 /*UTILITY CLASSES */
 .text-center {
     text-align: center;
@@ -622,7 +630,13 @@ html, body {
     .section-title-dark {
         font-size: 24px;
     }
-    
+
+    .footer-section .logo-text {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: #000;
+    }
+
     .contatto-text {
         font-size: 16px;
     }
