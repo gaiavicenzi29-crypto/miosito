@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   
   <!-- HEADER -->
   <header class="header-nav">
@@ -139,6 +140,7 @@
       <div class="row mb-5">
         <div class="col-12">
           <h2 class="section-title text-center">I MIEI PROGETTI</h2>
+          
         </div>
       </div>
     
@@ -209,7 +211,7 @@
 </section>
 
   <!-- SACRO SECTION -->
-  <section class="sacro-section section-dark">
+  <section class="section-dark sacro-section">
     <div class="container content-wrapper">
       <div class="row">
         <div class="col-12 col-lg-8 offset-lg-2">
@@ -299,6 +301,14 @@
     </div>
   </footer>
 
+  <!-- LIGHTBOX per progetti -->
+<div class="lightbox">
+    <button class="lightbox-close">×</button>
+    <div class="lightbox-content">
+        <img src="" alt="Progetto ingrandito">
+    </div>
+</div>
+
   <!-- JavaScript per menu mobile -->
   <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -363,6 +373,48 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.fade-in-up').forEach(element => {
         observer.observe(element);
     });
+  
+// === LIGHTBOX PROGETTI === //
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleziona tutte le immagini dei progetti
+    const progettoImages = document.querySelectorAll('.progetto-card img');
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImg = document.querySelector('.lightbox-content img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    
+    // Apri lightbox quando clicchi su un'immagine
+    progettoImages.forEach(img => {
+        img.addEventListener('click', function() {
+            lightbox.classList.add('show');
+            lightboxImg.src = this.src;
+            lightboxImg.alt = this.alt;
+            document.body.style.overflow = 'hidden'; // Blocca lo scroll della pagina
+        });
+    });
+    
+    // Chiudi lightbox cliccando sulla X
+    lightboxClose.addEventListener('click', function() {
+        lightbox.classList.remove('show');
+        document.body.style.overflow = 'auto'; // Riabilita lo scroll
+    });
+    
+    // Chiudi lightbox cliccando sullo sfondo nero
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Chiudi lightbox premendo il tasto ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('show')) {
+            lightbox.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+</script>
 </script>
 </body>
 </html>

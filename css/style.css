@@ -3,9 +3,10 @@ html, body {
     padding: 0;
     font-family: 'Manjari', sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1;
     color: #ffffff;
     scroll-behavior: smooth;
+    scroll-padding-top: 30px;
 }
 
 .content-wrapper {
@@ -149,7 +150,6 @@ html, body {
 }
 
 /* Bottone menu */
-/* Bottone menu */
 .btn-menu {
     background-color: #f5f0e8;
     border: 2px solid #f5f0e8;
@@ -163,14 +163,14 @@ html, body {
 }
 
 .btn-menu:hover {
-    background-color: #ffffff;
+    background-color: #f5f0e8;
     color: #000000;
-    border: 2px solid #ffffff;
+    border: 2px solid #f5f0e8;
 }
 /* Bottone close menu */
 .btn-close {
     background-color: transparent;
-    border: 2px solid #ffffff;
+    border: 2px solid #f5f0e8;
     color: #ffffff;
     padding: 10px 20px;
     cursor: pointer;
@@ -196,7 +196,7 @@ html, body {
 }
 
 .btn-close:hover {
-    background-color: #ffffff;
+    background-color: #f5f0e8;
     color: #000000;
 }
 
@@ -224,7 +224,7 @@ html, body {
 .section-dark {
     background-color: #000000;
     padding: 120px 0;
-    min-height: 100vh;
+
 }
 
 /* Titoli sezioni */
@@ -241,7 +241,7 @@ html, body {
 .section-text {
     font-family: 'Manjari', sans-serif;
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.5;
     color: #ffffff;
     margin: 0;
 }
@@ -314,7 +314,7 @@ html, body {
     margin: 0;
 }
 
-/* IMMAGINE GRANDE CESTO */
+/* IMMAGINE GRANDE*/
 .cesto-section {
     background-color: #000000;
     padding: 0;
@@ -341,12 +341,15 @@ html, body {
 
 /*  SACRO SECTION */
 .sacro-section {
-    padding: 100px 0;
+    padding: 150px 0;  /* Riduci questo */
+    background-color: #000000;
 }
+
 
 .sacro-section .section-text {
     max-width: 800px;
     margin: 0 auto;
+   
 }
 
 
@@ -359,6 +362,7 @@ html, body {
     transform: scale(0.95);
     transition: opacity 1s ease, transform 1s ease;
 }
+
 
 #competenze img.visible {
     opacity: 1;
@@ -387,6 +391,7 @@ html, body {
 
 .contatto-item {
     padding: 20px;
+    
 }
 
 .contatto-icon {
@@ -400,15 +405,13 @@ html, body {
     height: 40px;
     display: block;
     margin: 0 auto 15px;
-}
-.icone-svg{
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .contatto-link:hover .icone-svg {
-    transform: translateY(-8px);
-    filter: invert(1);
+    transform: translateY(-10px);
 }
+
 .contatto-text {
     font-family: 'Manjari', sans-serif;
     font-size: 18px;
@@ -483,6 +486,71 @@ html, body {
 .progetto-card.fade-in-up:nth-child(3) { transition-delay: 0.3s; }
 .progetto-card.fade-in-up:nth-child(4) { transition-delay: 0.4s; }
 
+/* === LIGHTBOX PROGETTI === */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.278);
+    backdrop-filter: blur(10px); /* Aggiunge sfocatura allo sfondo */
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.show {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+}
+.lightbox-content img {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(114, 114, 114, 0.2);
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color:#f5f0e8;
+    color: #000000;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.lightbox-close:hover {
+    background-color:#f5f0e8;
+    transform: rotate(90deg);
+}
+
+.progetto-card img {
+    cursor: pointer;
+}
+
 /* MEDIA QUERIES  */
 
 /* Tablet (max-width: 992px) */
@@ -508,7 +576,7 @@ html, body {
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
     .section-dark {
-        padding: 100px 0;
+        padding: 80px 0;
         min-height: 100vh;
     }
     
@@ -518,7 +586,7 @@ html, body {
     }
     
     .section-dark {
-        padding: 60px 0;
+        padding: 80px 0;
     }
     
     .section-title {
@@ -543,8 +611,8 @@ html, body {
         font-size: 13px;
     }
     
-    .sazin-section {
-        padding: 60px 0;
+    .sacro-section {
+        padding: 0px 0;
     }
     
     .contatti-section {
@@ -576,6 +644,11 @@ html, body {
     
     .section-text {
         font-size: 14px;
+    }
+    .section-dark {
+        padding: 80px 0;
+        min-height: 60vh;
+      
     }
     
     .progetto-card {
